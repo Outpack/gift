@@ -3,7 +3,6 @@ var w = c.width = window.innerWidth,
     //w = c.width = document.body.clientWidth,
     //h = c.height = document.body.clientHeight,
     ctx = c.getContext( '2d' ),
-    num = 1;
 
     opts = {
       
@@ -116,7 +115,8 @@ Line.prototype.step = function(){
 loop();
 
 window.addEventListener( 'touchstart', function(){
-  console.log(num);
+
+  console.log('adsd');
   w = c.width = window.innerWidth;
   h = c.height = window.innerHeight;
   ctx.fillStyle = 'black';
@@ -126,38 +126,10 @@ window.addEventListener( 'touchstart', function(){
   opts.cx = event.touches[0].clientX;
   opts.cy = event.touches[0].clientY;
   
-  document.getElementById("typedBox").
   dieX = w / 2 / opts.len;
   dieY = h / 2 / opts.len;
-
-  switch (num){
-    case 1:
-    $("#typed").typed({
-      strings:["waiting for connection"],
-      typeSpeed:50,
-      backDelay:100,
-      loop:false,
-      contentType:'text',
-      loopCount:true,
-    });
-    num += 1;
-    break;
-    case 2:
-    $("#typed").typed({
-      strings:["","connecting^2000","welcome to the world\n of silicon-based^500"],
-      typeSpeed:50,
-      backDelay:100,
-      loop:false,
-      contentType:'text',
-      loopCount:true,
-    });
-    num += 1;
-    break;
-//["waiting for connection^1000", "connecting^2000","welcome to the world\n of silicon-based^500","someone came before left you a message","~Happy Birthday~"],
-
-  }
 });
 window.addEventListener( 'touchend', function(){
-  lines = [];
+  lines = []
   opts.count = 0;
 });

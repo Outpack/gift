@@ -1,0 +1,15 @@
+#c{
+	position:fixed;
+	top:0;right:0;
+	z-index: -5;
+}
+#typed{
+	color:white;
+	z-index: 5;
+	font-family:幼圆;
+	font-size:20px;
+}
+#typedBox{
+	display:block;
+	margin:40% auto;
+}
