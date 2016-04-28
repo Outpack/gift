@@ -6,7 +6,7 @@ var w = c.width = window.innerWidth,
 
     opts = {
       
-      len: 50,
+      len: 30,
       count: 0,
       baseTime: 10,
       addedTime: 10,
@@ -128,8 +128,20 @@ window.addEventListener( 'touchstart', function(){
   
   dieX = w / 2 / opts.len;
   dieY = h / 2 / opts.len;
+
+  $(function(){
+  $("#typed").typed({
+      strings:["waiting for connection^1000", "connecting^2000","welcome to the world\n of silicon-based^500","someone came before left you a message","~Happy Birthday~"],
+      typeSpeed:50,
+      backDelay:100,
+      loop:false,
+      contentType:'text',
+      loopCount:true,
+    }) 
+  });
+
 });
 window.addEventListener( 'touchend', function(){
-  lines = []
+  lines = [];
   opts.count = 0;
 });
