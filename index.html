@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Document</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/typed.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		#c{
+			position:fixed;
+			top:0;right:0;
+			z-index: -5;
+		}
+		#typed{
+			color:white;
+			z-index: 5;
+			font-family:幼圆;
+			font-size:20px;
+		}
+		#typedBox{
+			display:block;
+			margin:40% auto;
+		}
+	</style>
+	<canvas id="c"></canvas>
+	<script src="js/hexagon.js"></script>
+	<div id = "typedBox"><span id = "typed"></span></div>
+	<script type="text/javascript">
+	$(function(){
+		$("#typed").typed({
+			strings:["waiting for connection^1000", "connecting^2000","welcome to the world\n of silicon-based^500","someone came before left you a message","~Happy Birthday~"],
+			typeSpeed:50,
+			backDelay:100,
+			loop:false,
+			contentType:'text',
+			loopCount:true,
+		})
+	});
+	</script>
+</body>
+</html>
